@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/js" href="formulario.js">
+    <link rel="stylesheet" type="text/css" href="formulario.css.css">
+    <title>Cadastro Pessoal </title>
+</head>
+
+<body>
+
+    <div>
+        <h1 id=" titulo ">CADASTRO PESSOAL</h1>
+        <p id="subtitulo ">Insira sua Informaçãos</p>
+        <br>
+    </div>
+
+    <form>
+
+        <fieldset class="grupo ">
+            <div class="campo">
+                <label for="nome "><strong>Nome:</strong></label>
+                <input type="text " name="nome " id="nome ">
+            </div>
+            <div class="campo">
+                <label for="sobrenome "><strong>Sobrenome:</strong></label>
+                <input type="text " name="Sobrenome " id="Sobrenome ">
+            </div>
+            <div class="campo">
+                <label for="endereço "><strong>Endereço:</strong></label>
+                <input type="text " name="Endereço " id="Endereço ">
+            </div>
+            <div class="campo">
+                <label for="cep "><strong>Cep:</strong></label>
+                <input type="number " name="Cep " id="Cep ">
+            </div>
+
+        </fieldset>
+        <div class="campo">
+            <label for="email "><strong>Email:</strong></label>
+            <input type="email " name="email " id="email ">
+            <label for="phone"><strong>Telefone:</strong></label>
+
+            <input type="tel" name="tel" pattern="\([0-8]{2}\)[0-9]{4}-[0-9]{4}" placeholder="(xx)xxxx-xxxx">
+            <label for="phone"><strong>Celular:</strong></label>
+            <input type="tel" name="tel" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx)9xxxx-xxxx">
+        </div>
+        <div class=" campo ">
+            <label for=" qual sua cidade "><strong>Qual sua Cidade:</strong></label>
+            <select id="Qual sua Cidade ">
+            <option selected disabled value=" ">Selecione...</option> 
+            <option>São Paulo</option>
+            <option>Minas Gerais</option>
+            <option>Rio de Janeiro</option>
+            </select>
+        </div>
+        <fieldset class="grupo ">
+            <div class="campo ">
+                <label><strong>Genero:</strong></label>
+                <select id=" Genero ">
+                    <option selected disabled value=" ">Selecione...</option> 
+                    <option>Mascuino</option>
+                    <option>Feminino</option>
+                    <option>Outros</option>
+                    </select>
+
+            </div>
+        </fieldset>
+        <div class="campo ">
+            <span class="input-group-addon " id="sizing-addon1 "><strong>CPF:</strong></span>
+            <input type="text " id="cpf_digitado " class="form-control " placeholder="Digite o cpf para validação ... " aria-describedby="sizing-addon1 ">
+        </div>
+        <small class="form-text text-muted "><strong>Digite somente numeros</strong> </small>
+        </div>
+        <button type="button " class="btn btn-info " onclick="validacao() ">Validar !</button>
+    </form>
+    </div>
+    <div class="container page-header ">
+        <div id="success " class="alert alert-success " style="display: none; " role="alert ">
+            <strong>Oba!</strong> Seu CPF é válido
+        </div>
+        <div id="error " class="alert alert-danger " style="display: none; " role="alert ">
+            <strong>Ops!</strong> Seu CPF não é válido
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <button type="submit "> Enviar </button>
+    </form>
+</body>
+
+</html>
